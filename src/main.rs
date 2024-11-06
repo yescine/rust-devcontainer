@@ -1,8 +1,7 @@
-
 use ferris_says::say;
 use std::io::{stdout, BufWriter};
 
-fn main () {
+fn hello (){
   print!("hello World \n");
   let stdout = stdout();
   let message = String::from("Hello fellow rustaceans!");
@@ -10,5 +9,15 @@ fn main () {
 
   let mut writer = BufWriter::new(stdout.lock());
   say(message.as_bytes(), width, &mut writer).unwrap();
+}
+
+fn main () {
+  hello();
+
+  let mut x:i32;
+  x = 1;
+  x +=4;
+  assert_eq!(x,5);
+  println!("success!");
 
 }
