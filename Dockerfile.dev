@@ -1,0 +1,20 @@
+# Use an official Golang image as a base
+FROM rust:1.82.0-bullseye
+
+# Set the Current Working Directory inside the container
+WORKDIR /app
+
+# Copy Cargo.toml files if you have them
+COPY Cargo.toml ./ 
+
+# Download all dependencies
+# RUN go mod download
+
+# Copy the source code
+COPY . .
+
+# Command to run the app
+# CMD ["cargo", "run", ""]
+
+# Keep the container running by default
+CMD ["tail", "-f", "/dev/null"]
