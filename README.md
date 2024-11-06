@@ -3,6 +3,8 @@
 ```bash
 # new project 
 cargo new hello-project
+
+cargo build
 ```
 
 ## Basic verification 
@@ -16,6 +18,6 @@ cargo --version
 # Run 
 
 ```bash
-rustc main.rs
+rustc src/main.rs
 cargo run 
 ```
